@@ -1,0 +1,9 @@
+git log (Muestra notas de todos los commit realizados)
+git log --graph (el adicional graph añade hilos de commits de una manera grafica y descripcion extensa)
+git log --graph --decorate --oneline (genera un grafico en texto decorado en una sola linea)
+
+git tag -a [nombre de tag] -m "[menjaje que desea colocar en el tag]" [identificador de commit] (crea un tag para el relase ejemplo: git tag -a v.01Prueba -m "tag de Prueba" 9dcbff87)
+
+git show-ref --tags (revisar tags relacionados)
+
+git push origin --tags (enviar tags a la nube)
