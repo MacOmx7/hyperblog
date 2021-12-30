@@ -7,3 +7,7 @@ git tag -a [nombre de tag] -m "[menjaje que desea colocar en el tag]" [identific
 git show-ref --tags (revisar tags relacionados)
 
 git push origin --tags (enviar tags a la nube)
+
+git tag -d v.01Prueba (Borrar tag de local)
+
+git push origin :refs/tags/v.01Prueba (borrar tag de internet)
