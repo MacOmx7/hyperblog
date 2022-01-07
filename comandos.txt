@@ -1,13 +1,49 @@
-git log (Muestra notas de todos los commit realizados)
-git log --graph (el adicional graph añade hilos de commits de una manera grafica y descripcion extensa)
+CONFIGURACION
+git init
+git config --global user.email "tu@email.com"
+git config --global user.name "Tu Nombre"
+
+COMANDOS BASICOS
+git status                  ()
+
+git show                    (Ve el ultimo commit y la cabecera)
+
+git add .                   (para mandar a staging o memoria ram)
+git add [nombre de archivo] (pana mandar a staging un archivo en especifico)
+
+git commit -m "mensaje"     (para mandar al repositorio)
+git commit -am "mensaje"    ()
+           
+git diff commitA commitB    (si quremos ver la diferencia entre una version y otra)
+
+git log                     (Muestra notas de todos los commit realizados)
+git log --stat              (Muestras los cambios en los commits)
+git log --graph             (el adicional graph añade hilos de commits de una manera grafica y descripcion extensa)
 git log --graph --decorate --oneline (genera un grafico en texto decorado en una sola linea)
+
+git checkout [branch]       (para moverse de branch o dirigirse a un commit)
+git checkout [commit] [archivo] (para moverse a un commmit y archivo en especifico)
+git checkout master [archivo] (traer la ultima version q se habia comiteado)
+
+git rm --cached             (Elimina los archivos de nuestro repositorio local y del área de staging)
+git rm --force              (Elimina los archivos de Git y del disco duro)
+
+git reset [commit] --hard   (todo vuelve al estado anterior)
+git reset [commit] --soft   (para volcer al commit anterior, si existen codigo en add seguira disponible)
+git reset HEAD              (Este es el comando para sacar archivos del área de staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit)
+
+git merge
 
 git tag -a [nombre de tag] -m "[menjaje que desea colocar en el tag]" [identificador de commit] (crea un tag para el relase ejemplo: git tag -a v.01Prueba -m "tag de Prueba" 9dcbff87)
 
-git show-ref --tags (revisar tags relacionados)
+git show-ref --tags         (revisar tags relacionados)
 
-git push origin --tags (enviar tags a la nube)
+git pull                    (bajar codigo para todas las ramas)
+git pull origin [branch]    (bajar codigo para un logo branch)
+git pull origin [branch] --allow-unrelated-histories (forzamos realizar el pull de un origin q aun no habia sido relacionado con el commit local)
 
-git tag -d v.01Prueba (Borrar tag de local)
+git push origin --tags      (enviar tags a la nube)
+
+git tag -d v.01Prueba       (Borrar tag de local)
 
 git push origin :refs/tags/v.01Prueba (borrar tag de internet)
