@@ -47,3 +47,20 @@ git push origin --tags      (enviar tags a la nube)
 git tag -d v.01Prueba       (Borrar tag de local)
 
 git push origin :refs/tags/v.01Prueba (borrar tag de internet)
+
+git rebase master           (trae los cambios de la rama como si no ubiera pasado nada, como cobinada ambas ramas como si el checkot lo ubiera echo desde el ultimo estado de la rama master, se aconseja hacerlo para local por q se pierde la secuencia de modificaciones en la rama)
+
+git branch -D [rama]        (Borra la rrama)
+
+git stash                   (llevar cambios a memoria de forma temporal)
+git stash list              (ver que cambios esta en memoria)
+git stash pop               (volver al cambio antes de llevarlo a memoria)
+git stash branch [newRama]  (puedes crear una rama en stash)
+git stash drop              (borrar el cambio q se envio a stash)
+git stash clear             (comando para borrar todos los stash)
+
+git clean --dry-run         ()
+git clean -f                (para borrar archivos antes de realizar el commit)
+
+git cherry-pick [IDCommit]  (traer un commit de otra rama)
+
