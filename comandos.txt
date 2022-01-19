@@ -16,10 +16,16 @@ git commit -am "mensaje"    ()
            
 git diff commitA commitB    (si quremos ver la diferencia entre una version y otra)
 
+ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+eval $(ssh-agent -s)
+ssh-add ruta-donde-guardaste-tu-llave-privada
+ssh-add ~/.ssh/id_rsa
+
 git log                     (Muestra notas de todos los commit realizados)
 git log --stat              (Muestras los cambios en los commits)
 git log --graph             (el adicional graph añade hilos de commits de una manera grafica y descripcion extensa)
 git log --graph --decorate --oneline (genera un grafico en texto decorado en una sola linea)
+git log -S "[buscar]"       (Busca palabra en commits)
 
 git checkout [branch]       (para moverse de branch o dirigirse a un commit)
 git checkout [commit] [archivo] (para moverse a un commmit y archivo en especifico)
@@ -64,3 +70,13 @@ git clean -f                (para borrar archivos antes de realizar el commit)
 
 git cherry-pick [IDCommit]  (traer un commit de otra rama)
 
+git commit --amend          (Agrega el cambio al ultimo commit, siempre hacer el [git add .])
+
+git reflog                  (muestra el log de commits)
+
+git reset --soft [IDCommit] (vuelve todo al commit mencionado si hay cambios en stagin permanece)
+git reset --hard [IDCommit] (Vuelve todo al commit mencionado y si hay cambio en stagin se pierde)
+
+git grep [P-buscar]        (busca palabra en archivos)
+git grep -n [P-buscar]     (busca palabra y muestra el numero linea)
+git grep -c [P-buscar]     (busca palabra y cuenta cuantas veces se repite)
