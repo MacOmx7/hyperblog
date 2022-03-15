@@ -1,5 +1,6 @@
 CONFIGURACION
 git init
+git config --list           (Ver configuracion)
 git config --global user.email "tu@email.com"
 git config --global user.name "Tu Nombre"
 
